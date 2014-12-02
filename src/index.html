@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>Basic Example with JSX</title>
+    <link rel="stylesheet" href="../shared/css/base.css" />
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/react.js"></script>
+    <script src="../lib/JSXTransformer.js"></script>
+    <script type="text/jsx" src="js/rat.jsx"></script>
+  </head>
+  <body>
+    <h1>Basic Example with Angular and React</h1>
+    <rat></rat>
+    <script>
+    setTimeout(function() {
+      angular.bootstrap(document, ["rat"]);
+    }, 1000 );
+    </script>
+  </body>
+</html>
