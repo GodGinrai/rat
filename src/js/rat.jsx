@@ -1,4 +1,4 @@
-angular.module("rat", []).factory("rat", function() {
+angular.module("Rat", []).factory("Rat", function() {
   var template = React.createClass({
     render: function() {
       var message =
@@ -8,11 +8,12 @@ angular.module("rat", []).factory("rat", function() {
     }
   });
 
-  return template;
-}).directive("rat", function(template) {
+  return React.createFactory(template);
+}).directive("rat", ["Rat", function(template) {
   return {
+    restrict: "E",
     link: function(scope, element) {
-      React.renderComponent(template(scope), element[0]);
+      React.render(template(scope), element[0]);
     }
   }
-});
+}]);
